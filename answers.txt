@@ -1,0 +1,41 @@
+Part 1:
+1.1
+Predicates to describe the map.
+Location(x) - where x is BUFF, UB, UF, MB, MF, LB or LF.
+Adjacent(x, y) - meaning x is adjacent to y, where both x and y are locations.
+
+1.2
+How to keep track of the Location agent, plate or customer is At.
+At(x, y) - meaning x is at y; where x is agent, plate or customer and y is a location.
+
+1.3
+Predicates to model a Plate and if it Has Food or not.
+
+HasFood(p) - we do not need to specify what food is on the plate.
+At(p, x) - where plate p is at location x.
+Holding(a, p) - where agent a is holding a plate p.
+
+1.4
+Predicates to model a Customer, and if it has been Served or not.
+
+Served(c) - checks if the customer c has been served or not.
+At(c, x) - customer c is at location x.
+
+1.5
+Initial State: Location(BUFF) ∧ Location(UB) ∧ Location(UF) ∧ Location(MB) ∧ Location(MF) ∧ Location(LB) ∧ Location(LF) ∧ Adjacent(BUFF,UF) ∧ Adjacent(UF,BUFF) ∧ Adjacent(UB,UF) ∧ Adjacent
+Agent(a) ∧ At(a,BUFF) ∧ Plate(p) ∧ At(p,BUFF) ∧ Customer(c) ∧ At(c,LB)
+
+
+1.6
+1.7
+1.8
+1.9
+1.10
+Part 4:
+4.1
+The customers that ordered tea, coffee or ice cream should be served first in order to keep the food quality unaffected. Assuming that a customer's orders can all be fitted in one plate, then the agent would just have carry all these items to the customer. However, if there are multiple customers, then the agent should prioritise serving customers that ordered tea, coffee or ice cream over customers that ordered sushi. In order to ensure that all items are served in a timely fashion, then it we would need some kind of measure to know the temperature of the coffee and tea, and whether the ice cream has been melted or not.
+
+4.2
+With the aim of meeting social expectations, customers would need to be served on a first-come-first-served basis. However, having the goal of serving the customers that first arrived to the restaurant would conflict with the goal from 4.1 of wanting to serve those customers who ordered tea, coffee or ice cream first. Therefore, the agent would need to prioritise what the main goal is, either the quality of the food or social expectations. Also, we would need to keep track of which customers arrived first in order to serve them first, as well as keeping track of the orders and the state of the food that can be affected. In general, accommodating both social expectations and the goal of keeping the food unaffected.
+
+

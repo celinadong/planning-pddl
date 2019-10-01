@@ -1,1 +1,2 @@
-# planning-pddl
+# Planning Domain Definition Language
+
